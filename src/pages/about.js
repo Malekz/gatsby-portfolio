@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
+import { Link } from "gatsby"
 
 import { css, Styled } from "theme-ui"
 
@@ -31,25 +32,11 @@ const AboutPage = props => {
         <p>
           I use Javascript because of its versatility and ongoing evolution.
         </p>
-        <p>I use Javascript</p>
         <p>
           I made a career change in 2018 from B.A in English Language and
           Literature into web development.
         </p>
-        <p>
-          Actually, it all started in the summer of 2017 when I attended an
-          event in Trivago’s headquarter office in Dusseldorf. There was that
-          guy who spoke for 30 minutes about how he become a web developer in
-          less than a year and now he is working for Trivago in a product used
-          by millions of people around the globe.
-        </p>
-        <p>He ended his speech by saying the following:</p>
-        <blockquote>
-          I have never been satisfied and fulfilled personally and
-          professionally as I am today .. the web is the future
-        </blockquote>
 
-        <p>His story sold me.</p>
         <p>
           After a 12 month intensive Web Development Bootcamp in an
           international and multicultural environment institute, i've gained the
@@ -70,9 +57,21 @@ const AboutPage = props => {
           More about me
         </Styled.h2>
         <p>
-          Born in Syria, raised in Abu Dhabi, lived in Istanbul, and lives in
-          beautiful Dinslaken, Germany.
+          Born in Syria, raised in Abu Dhabi, lived two years in Istanbul, and
+          now settled in beautiful Dinslaken, Germany.
         </p>
+
+        <ul>
+          {data.allFile.edges.map((file, index) => {
+            return (
+              <li key={`pdf-${index}`}>
+                <Styled.a as={Link} to={file.node.publicURL} download>
+                  Download Resume
+                </Styled.a>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </Layout>
   )
@@ -92,6 +91,14 @@ export const pageQuery = graphql`
         # Specify the image processing specifications right in the query.
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allFile(filter: { extension: { eq: "pdf" } }) {
+      edges {
+        node {
+          publicURL
+          name
         }
       }
     }
