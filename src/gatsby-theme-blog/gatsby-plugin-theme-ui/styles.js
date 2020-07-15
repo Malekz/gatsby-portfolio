@@ -36,6 +36,7 @@ export default {
     borderColor: `muted`,
   },
   p: {
+    fontSize: `14px`,
     code: {
       fontSize: `inherit`,
     },

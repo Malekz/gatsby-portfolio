@@ -22,7 +22,6 @@
   left: var(--bubbleOffset);
   width: var(--bubbleSize);
   height: var(--bubbleSize);
-  background: #b58900;
   z-index: -1;
   border-radius: 50%;
   transition-property: width, height;

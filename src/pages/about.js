@@ -56,16 +56,29 @@ const AboutPage = props => {
         >
           More about me
         </Styled.h2>
+        <p>I am a husband and father of two.</p>
         <p>
-          Born in Syria, raised in Abu Dhabi, lived two years in Istanbul, and
-          now settled in beautiful Dinslaken, Germany.
+          Born in Syria, raised in Dubai, lived two years in Istanbul, and now
+          settled in beautiful Dinslaken, Germany.
         </p>
-
+        <p>
+          I like all kinds of sports, but Tennis and Table-tennis is my
+          main-sport.
+        </p>
+        <p>
+          Cooking? I've been told that i got the gift. I mainly cook
+          middle-eastern cuisines. Who knows! you might taste my food one day.
+        </p>
         <ul>
           {data.allFile.edges.map((file, index) => {
             return (
-              <li key={`pdf-${index}`}>
-                <Styled.a as={Link} to={file.node.publicURL} download>
+              <li
+                css={css({
+                  textDecoration: "none",
+                })}
+                key={`pdf-${index}`}
+              >
+                <Styled.a href={file.node.publicURL} download>
                   Download Resume
                 </Styled.a>
               </li>
@@ -94,7 +107,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allFile(filter: { extension: { eq: "pdf" } }) {
+    allFile(filter: { base: { eq: "resume.pdf" } }) {
       edges {
         node {
           publicURL

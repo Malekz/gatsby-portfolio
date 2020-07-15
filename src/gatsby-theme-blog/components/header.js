@@ -17,6 +17,9 @@ const Title = ({ children, location }) => {
         css={css({
           my: 0,
           fontSize: 4,
+          "::before": {
+            backgroundColor: "primary",
+          },
         })}
       >
         <Styled.a
@@ -35,10 +38,13 @@ const Title = ({ children, location }) => {
   } else {
     return (
       <Styled.h3
-        className={`logo ${location ? "logo--large" : ""}`}
+        className={`logo `}
         as="p"
         css={css({
           my: 0,
+          "::before": {
+            backgroundColor: "primary",
+          },
         })}
       >
         <Styled.a
