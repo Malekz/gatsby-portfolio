@@ -19,22 +19,41 @@ module.exports = {
       options: {},
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
-        display: `standalone`,
+        icon: "content/assets/favicon.png",
+        cache_busting_mode: "none",
       },
     },
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        excerpt_separator: `<!-- end -->`,
+      },
+    },
+    /*
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
           "https://Zarzour.us3.list-manage.com/subscribe/post?u=b36d3724bf6d4f90f6a2f6aec&amp;id=f8569a7788",
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
+    */
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_self",
+              rel: "nofollow",
+            },
+          },
+        ],
       },
     },
   ],
