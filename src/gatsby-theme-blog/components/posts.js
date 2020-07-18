@@ -7,7 +7,7 @@ import Subscribe from "../../components/subscribe"
 
 const Posts = ({ location, posts, siteTitle }) => (
   <Layout location={location} title={siteTitle}>
-    <SEO title="all posts" />
+    <SEO title="Malek Zarzour" />
     <main>
       <PostList posts={posts} />
       <Subscribe />

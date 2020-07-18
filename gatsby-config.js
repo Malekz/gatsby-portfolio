@@ -22,6 +22,18 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "content/assets/favicon.svg",
+        icons: [
+          {
+            src: `/favicons/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
         cache_busting_mode: "none",
       },
     },
@@ -47,7 +59,7 @@ module.exports = {
   siteMetadata: {
     title: `Zarzour.de`,
     author: `Malek Zarzour`,
-    description: `Entrepreneur by heart and a Frontend Developer by Profession`,
+    description: `Frontend Developer and open source creator.`,
     siteUrl: `https://zarzour.de`,
     social: [
       {
