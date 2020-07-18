@@ -36,7 +36,10 @@ const UsesPage = props => {
         </p>
         <p>
           <strong>
-            No affiliate links on this page. Browse at ease. <span>😊</span>
+            No affiliate links on this page. Browse at ease.{" "}
+            <span role="img" aria-label="smily">
+              😊
+            </span>
           </strong>
         </p>
 

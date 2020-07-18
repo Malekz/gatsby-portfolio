@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
 
 import { css, Styled } from "theme-ui"
 
@@ -21,7 +20,9 @@ const AboutPage = props => {
             textAlign: "center",
           })}
         >
-          <span>Hey there 👋</span>
+          <span role="img" aria-label="hello">
+            Hey there 👋
+          </span>
         </Styled.h2>
         <Image fluid={data.file.childImageSharp.fluid} css={css({})} />
         <p>
@@ -29,12 +30,6 @@ const AboutPage = props => {
           I am an advocate for web performance and accessibility as well as a
           JAMstack enthusiast.
         </p>
-        <Link as={Link} to={`https://github.com`}>
-          External
-        </Link>
-        <Link as={Link} to={`uses`}>
-          Enternal
-        </Link>
         <p>
           I use Javascript because of its versatility and ongoing evolution.
         </p>

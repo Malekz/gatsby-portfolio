@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "content/assets/favicon.png",
+        icon: "content/assets/favicon.svg",
         cache_busting_mode: "none",
       },
     },
@@ -42,26 +42,12 @@ module.exports = {
       },
     },
     */
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_self",
-              rel: "nofollow",
-            },
-          },
-        ],
-      },
-    },
   ],
   // Customize your site metadata:
   siteMetadata: {
     title: `Zarzour.de`,
     author: `Malek Zarzour`,
-    description: `My site description...`,
+    description: `Entrepreneur by heart and a Frontend Developer by Profession`,
     siteUrl: `https://zarzour.de`,
     social: [
       {

@@ -14,6 +14,7 @@ export default ({ children, ...props }) => {
     <Styled.root>
       <Helmet>
         <link rel="stylesheet" href={webfontURL} />
+        <meta name="theme-color" content="#e06066" />
       </Helmet>
       <Header {...props} />
       <div>
