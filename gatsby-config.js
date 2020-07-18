@@ -62,7 +62,7 @@ module.exports = {
     title: `Zarzour.de`,
     author: `Malek Zarzour`,
     description: `My site description...`,
-    siteUrl: `https://zarzour.de/`,
+    siteUrl: `https://zarzour.de`,
     social: [
       {
         name: `twitter`,

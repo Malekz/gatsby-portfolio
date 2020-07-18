@@ -31,17 +31,17 @@ const Project = ({ project }) => (
           marginBottom: "5px",
         })}
       >
-        <Styled.a
+        <a
           css={css({
             textDecoration: `none`,
+            color: `primary`,
           })}
-          as={Link}
           rel="noopener noreferrer"
           target="_blank"
-          to={project.node.frontmatter.link}
+          href={project.node.frontmatter.link}
         >
           {project.node.frontmatter.title}
-        </Styled.a>
+        </a>
       </Styled.h3>
       <small
         css={css({

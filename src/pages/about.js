@@ -29,6 +29,12 @@ const AboutPage = props => {
           I am an advocate for web performance and accessibility as well as a
           JAMstack enthusiast.
         </p>
+        <Link as={Link} to={`https://github.com`}>
+          External
+        </Link>
+        <Link as={Link} to={`uses`}>
+          Enternal
+        </Link>
         <p>
           I use Javascript because of its versatility and ongoing evolution.
         </p>
