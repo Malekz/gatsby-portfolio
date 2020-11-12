@@ -10,8 +10,7 @@ export default function Bio() {
     <>
       Written by <strong>Malek Zarzour</strong>
       {` `}, a passionate frontend developer based in Dinslaken, Germany. This
-      is where i share everything Frontend. Follow me{" "}
-      <Styled.a href="http://twitter.com/malekzarzour">@malekzarzour</Styled.a>
+      is where i share everything Frontend.
     </>
   )
 }
